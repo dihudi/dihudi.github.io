@@ -1,0 +1,145 @@
+<html>
+  <title> Di Hu - Archaeology and Historical Anthropology of the Andes</title>
+<head>
+ 
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+ <link rel="stylesheet" href="tufte.css"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<style>
+ 
+.mySlides {display:none;}
+hr.style-one {
+    
+border: 0;
+    height: 3px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.breadcrumb{position:relative; height:40px; 
+width:100%;}
+.breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('breadcrumbImage.png') 0px -30px repeat-x; }
+.breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px display:inline;}
+.breadcrumb ul li a{font:36px Gill Sans MT, Calibri, Arial; 
+color:rgb(125,125,125); text-decoration:none; line-height:30px; display:block; background:url('breadcrumbImage.png') 100% -60px no-repeat; padding:0 17px 0 
+15px; }
+.breadcrumb ul li a:hover {text-decoration:underline; color:rgb(0,0,0);}
+.breadcrumb ul li a.active{background:none; color:rgb(255,0,0);}
+.breadcrumb ul li a.active:hover {text-decoration:none;}
+.breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; 
+background:url('breadcrumbImage.png') 0% 0px no-repeat;}
+.breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-
+index:1; background:url('breadcrumbImage.png') 100% -90px no-repeat; }
+</style>
+</head>
+<body>
+   
+
+  
+
+  <table width="1300" align="center"><tr><td><img src="logo.jpg" width="1300"></td></tr>
+    <tr><td><hr>
+<div class="breadcrumb" align="center">
+  
+
+
+  <ul>
+    <li><a href="http://dihudi.github.io" class="active">ABOUT ME</a></li>
+    <li><a 
+
+href="http://dihudi.github.io/research.html">RESEARCH</a></li>
+    <li><a href="http://dihudi.github.io/cv.html">CV</a></li>
+    <li><a 
+
+href="http://dihudi.github.io/teaching.html">TEACHING</a></li>
+	  <li><a href="http://dihudi.github.io/data.html">DATA</a></li>
+ 
+    <li><a href="https://medium.com/@dihuarchaeology">BLOG</a></li>
+	     <li><a href="https://berkeley.academia.edu/DiHu"><img src="academia.jpg" height="35" alt="Academia.edu profile"></a></li>
+	     <li><a href="https://scholar.google.com/citations?user=uMLe8BsAAAAJ&hl=en"><img src="googlescholar.jpg" height="35" alt="Google Scholar profile"></a></li>
+	     <li><a href="https://www.researchgate.net/profile/Di_Hu35"><img src="researchgate.JPG" alt="ResearchGate profile" height="35"></a></li>
+	     <li><a href="http://twitter.com/dihuarchaeology"><img src="twitter.jpg" height="35" alt="Twitter profile"></a></li>
+  </ul>
+	
+ 
+</div>
+<hr>
+</td>
+</tr>
+<tr>
+<td>
+<div class="w3-container">
+  <h2>Slideshow Caption</h2>
+  <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>
+</div>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="hobbies/cuzco.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    View of Cusco from Sacsayhuaman
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="hobbies/machupicchu.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    Machu Picchu in the late afternoon
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="hobbies/ollantaytambo.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    Detail of Inca masonry at Ollantaytambo
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="hobbies/pikillacta.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    The Rain Forest
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_mountains.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+    Mountains!
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</td>
+</tr>
+   
+</table>
+
+
+</body>
+</html>
+
