@@ -15,7 +15,6 @@
 
         body {
             font-family: 'Gill Sans MT', Calibri, Arial, sans-serif;
-            line-height: 1.6;
             max-width: 100%;
             overflow-x: hidden;
             background-color: white;
@@ -69,12 +68,12 @@
         }
 
         .breadcrumb ul li a {
-            font: 36px 'Gill Sans MT', Calibri, Arial;
+            font: 42px 'Gill Sans MT', Calibri, Arial; /* Increased from 36px */
             color: rgb(125,125,125);
             text-decoration: none;
             line-height: 30px;
             display: block;
-            padding: 0 17px 0 15px;
+            padding: 0 20px; /* Increased padding for larger text */
         }
 
         .breadcrumb ul li a:hover {
@@ -91,16 +90,17 @@
             max-width: 100%;
             margin: 0 auto;
             padding: 2rem;
+            font-size: 1.4rem; /* Increased from default size */
+            line-height: 1.6; /* Adjusted for readability with larger font */
         }
 
         .content p {
             text-align: justify;
-            line-height: 1.1;
             margin-bottom: 1.5rem;
         }
 
         .content p:first-of-type::first-letter {
-            font-size: 36px;
+            font-size: 48px; /* Increased from 36px */
             float: left;
             padding-right: 4px;
             line-height: 1;
@@ -133,6 +133,11 @@
             .content {
                 width: 95%;
             }
+
+            .breadcrumb ul li a {
+                font-size: 36px; /* Slightly smaller on medium screens */
+                padding: 0 15px;
+            }
         }
 
         @media screen and (max-width: 768px) {
@@ -152,16 +157,17 @@
             }
 
             .breadcrumb ul li a {
-                font-size: 24px;
+                font-size: 28px;
                 padding: 5px 15px;
             }
 
             .content {
                 padding: 1rem;
+                font-size: 1.2rem;
             }
 
             .content p:first-of-type::first-letter {
-                font-size: 30px;
+                font-size: 36px;
             }
         }
 
@@ -171,12 +177,13 @@
             }
 
             .breadcrumb ul li a {
-                font-size: 20px;
+                font-size: 24px;
                 padding: 3px 10px;
             }
 
             .content {
                 padding: 0.5rem;
+                font-size: 1.1rem;
             }
 
             .social-icons {
