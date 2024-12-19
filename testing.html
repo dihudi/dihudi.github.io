@@ -68,16 +68,15 @@
         }
 
         .breadcrumb ul li a {
-            font: 42px 'Gill Sans MT', Calibri, Arial; /* Increased from 36px */
+            font: 42px 'Gill Sans MT', Calibri, Arial;
             color: rgb(125,125,125);
-            text-decoration: none;
+            text-decoration: none; /* Removed underline */
             line-height: 30px;
             display: block;
-            padding: 0 20px; /* Increased padding for larger text */
+            padding: 0 20px;
         }
 
         .breadcrumb ul li a:hover {
-            text-decoration: underline;
             color: rgb(0,0,0);
         }
 
@@ -85,13 +84,23 @@
             color: rgb(255,0,0);
         }
 
+        /* Remove underline on hover for menu links */
+        .breadcrumb ul li a:hover {
+            text-decoration: none;
+        }
+
+        /* Keep underlines for content links only */
+        .content a {
+            text-decoration: underline;
+        }
+
         .content {
             width: 1050px;
             max-width: 100%;
             margin: 0 auto;
             padding: 2rem;
-            font-size: 1.4rem; /* Increased from default size */
-            line-height: 1.6; /* Adjusted for readability with larger font */
+            font-size: 1.4rem;
+            line-height: 1.6;
         }
 
         .content p {
@@ -100,7 +109,7 @@
         }
 
         .content p:first-of-type::first-letter {
-            font-size: 48px; /* Increased from 36px */
+            font-size: 48px;
             float: left;
             padding-right: 4px;
             line-height: 1;
@@ -112,7 +121,6 @@
             margin: 2rem auto;
         }
 
-        /* Social icons specific styling */
         .social-icons {
             display: flex;
             gap: 10px;
@@ -135,7 +143,7 @@
             }
 
             .breadcrumb ul li a {
-                font-size: 36px; /* Slightly smaller on medium screens */
+                font-size: 36px;
                 padding: 0 15px;
             }
         }
