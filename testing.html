@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Di Hu - Archaeology and Historical Anthropology of the Andes</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="stylesheet" href="tufte.css"/>
     <style>
         * {
             margin: 0;
@@ -17,22 +18,22 @@
             line-height: 1.6;
             max-width: 100%;
             overflow-x: hidden;
+            background-color: white;
         }
 
         .container {
-            width: 95%;
+            width: 100%;
             max-width: 1300px;
             margin: 0 auto;
-            padding: 1rem;
         }
 
         .header-image {
             width: 100%;
             height: auto;
-            margin-bottom: 1rem;
+            display: block;
         }
 
-        hr {
+        hr.style-one {
             border: 0;
             height: 3px;
             background: #333;
@@ -40,50 +41,68 @@
             margin: 1rem 0;
         }
 
-        .nav {
+        .breadcrumb {
+            position: relative;
+            height: 40px;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .breadcrumb ul {
+            position: relative;
+            margin: 0 5px;
+            padding: 0;
+            height: 30px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
-            padding: 1rem 0;
+            flex-wrap: wrap;
+            list-style: none;
         }
 
-        .nav a {
+        .breadcrumb ul li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: inline-flex;
+            height: 30px;
+        }
+
+        .breadcrumb ul li a {
+            font: 36px 'Gill Sans MT', Calibri, Arial;
             color: rgb(125,125,125);
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s ease;
+            line-height: 30px;
+            display: block;
+            padding: 0 17px 0 15px;
         }
 
-        .nav a:hover {
-            color: rgb(0,0,0);
+        .breadcrumb ul li a:hover {
             text-decoration: underline;
+            color: rgb(0,0,0);
         }
 
-        .nav a.active {
+        .breadcrumb ul li a.active {
             color: rgb(255,0,0);
         }
 
-        .nav img {
-            height: 35px;
-            width: auto;
-        }
-
         .content {
-            padding: 2rem 0;
+            width: 1050px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         .content p {
-            margin-bottom: 1.5rem;
             text-align: justify;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
         }
 
-        .content p:first-letter {
-            font-size: 2.5em;
+        .content p:first-of-type::first-letter {
+            font-size: 36px;
             float: left;
-            padding-right: 0.1em;
+            padding-right: 4px;
             line-height: 1;
         }
 
@@ -93,53 +112,77 @@
             margin: 2rem auto;
         }
 
-        /* Responsive breakpoints */
+        /* Social icons specific styling */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .social-icons img {
+            height: 35px;
+            width: auto;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 1300px) {
+            .container {
+                width: 95%;
+            }
+            
+            .content {
+                width: 95%;
+            }
+        }
+
         @media screen and (max-width: 768px) {
-            .nav {
+            .breadcrumb ul {
+                height: auto;
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
+                padding: 1rem 0;
             }
 
-            .nav a {
-                width: 100%;
-                padding: 0.75rem;
-                border-bottom: 1px solid #eee;
+            .breadcrumb {
+                height: auto;
             }
 
-            .content p:first-letter {
-                font-size: 2em;
+            .breadcrumb ul li {
+                margin: 5px 0;
+            }
+
+            .breadcrumb ul li a {
+                font-size: 24px;
+                padding: 5px 15px;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .content p:first-of-type::first-letter {
+                font-size: 30px;
             }
         }
 
         @media screen and (max-width: 480px) {
             .container {
                 width: 100%;
-                padding: 0.5rem;
             }
 
-            .nav a {
-                font-size: 1rem;
-                padding: 0.5rem;
+            .breadcrumb ul li a {
+                font-size: 20px;
+                padding: 3px 10px;
             }
 
             .content {
-                padding: 1rem 0;
+                padding: 0.5rem;
             }
-        }
 
-        /* Social media icons container */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            padding: 1rem 0;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            .social-icons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -147,30 +190,31 @@
     <div class="container">
         <img src="logo.jpg" alt="Header Logo" class="header-image">
         
-        <hr>
+        <hr class="style-one">
         
-        <nav class="nav">
-            <a href="http://dihudi.github.io" class="active">ABOUT ME</a>
-            <a href="http://dihudi.github.io/research.html">RESEARCH</a>
-            <a href="http://dihudi.github.io/cv.html">CV</a>
-            <a href="http://dihudi.github.io/teaching.html">TEACHING</a>
-            <a href="http://dihudi.github.io/data.html">DATA</a>
-            <a href="https://medium.com/@dihuarchaeology">BLOG</a>
-        </nav>
-
-        <div class="social-icons">
-            <a href="https://berkeley.academia.edu/DiHu">
-                <img src="academia.jpg" height="35" alt="Academia.edu profile">
-            </a>
-            <a href="https://scholar.google.com/citations?user=uMLe8BsAAAAJ&hl=en">
-                <img src="googlescholar.jpg" height="35" alt="Google Scholar profile">
-            </a>
-            <a href="https://www.researchgate.net/profile/Di_Hu35">
-                <img src="researchgate.JPG" alt="ResearchGate profile" height="35">
-            </a>
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="http://dihudi.github.io" class="active">ABOUT ME</a></li>
+                <li><a href="http://dihudi.github.io/research.html">RESEARCH</a></li>
+                <li><a href="http://dihudi.github.io/cv.html">CV</a></li>
+                <li><a href="http://dihudi.github.io/teaching.html">TEACHING</a></li>
+                <li><a href="http://dihudi.github.io/data.html">DATA</a></li>
+                <li><a href="https://medium.com/@dihuarchaeology">BLOG</a></li>
+                <li class="social-icons">
+                    <a href="https://berkeley.academia.edu/DiHu">
+                        <img src="academia.jpg" alt="Academia.edu profile">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=uMLe8BsAAAAJ&hl=en">
+                        <img src="googlescholar.jpg" alt="Google Scholar profile">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Di_Hu35">
+                        <img src="researchgate.JPG" alt="ResearchGate profile">
+                    </a>
+                </li>
+            </ul>
         </div>
         
-        <hr>
+        <hr class="style-one">
 
         <main class="content">
             <p>I am a broadly trained anthropological archaeologist whose research explores the intersection of landscape and political ecology. I am currently an assistant professor of Anthropology at James Madison University. Using a combination of environmental archaeology methods such as geospatial analysis, geochemical analysis, starch grain analysis, and archival research, I investigate how landscape constrains and provides opportunities for collective action, such as the rise of states, coordinated rebellions, and the emergence of new group identities in South America. My research highlights the key role that social landscapes—the organization of social relations over the landscape—play in facilitating collective struggles to control one's own labor, ritual landscape, and ecological resources.</p>
@@ -181,7 +225,7 @@
         <img src="tiwanakupointdi.gif" alt="Tiwanaku Point" class="footer-image">
     </div>
 
-    <!-- StatCounter code remains unchanged -->
+    <!-- StatCounter code -->
     <script type="text/javascript">
         var sc_project=11858427; 
         var sc_invisible=1; 
