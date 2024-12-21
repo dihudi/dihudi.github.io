@@ -255,7 +255,7 @@ summary:focus {
 	outline-style: none;
 }
 article > details > summary {
-	font-size: 28px;
+	font-size: 20px;
 	margin-top: 16px;
 }
 details > p {
@@ -265,6 +265,6 @@ details details {
 	margin-left: 36px;
 }
 details details summary {
-	font-size: 16px;
+	font-size: 14px;
 }
 
