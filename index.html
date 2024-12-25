@@ -1,79 +1,442 @@
-﻿﻿<!DOCTYPE html>
-<html>
-  <title> Di Hu - Archaeology and Historical Anthropology of the Andes</title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
- 
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
- <link rel="stylesheet" href="tufte.css"/>
-	<style>
- 
-
-hr.style-one {
-    
-border: 0;
-    height: 3px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
-}
-.breadcrumb{position:relative; height:40px; 
-width:100%;}
-.breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('breadcrumbImage.png') 0px -30px repeat-x; }
-.breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px display:inline;}
-.breadcrumb ul li a{font:36px Gill Sans MT, Calibri, Arial; 
-color:rgb(125,125,125); text-decoration:none; line-height:30px; display:block; background:url('breadcrumbImage.png') 100% -60px no-repeat; padding:0 17px 0 
-15px; }
-.breadcrumb ul li a:hover {text-decoration:underline; color:rgb(0,0,0);}
-.breadcrumb ul li a.active{background:none; color:rgb(255,0,0);}
-.breadcrumb ul li a.active:hover {text-decoration:none;}
-.breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; 
-background:url('breadcrumbImage.png') 0% 0px no-repeat;}
-.breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-
-index:1; background:url('breadcrumbImage.png') 100% -90px no-repeat; }
+<title>Di Hu - Archaeology and Historical Anthropology of the Andes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
 </style>
 </head>
 <body>
-   
 
-  
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Navigation</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-grey">Home</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-grey">About me</a> 
+    <a href="#research" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-grey">Research</a> 
+    <a href="#pubs" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-grey">Publications and Data</a> 
+    <a href="#teaching" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-grey">Teaching</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-light-grey">Contact</a>
+	 	     
+  </div>
+</nav>
 
-  <table width="1300" align="center"><tr><td colspan="2"><img src="logo.jpg" width="1300"></td></tr>
-    <tr><td colspan="2"><hr>
-<div class="breadcrumb" align="center">
-  
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-purple w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-white w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Navigation</span>
+</header>
 
-<span class="left"></span>
-  <ul>
-    <li><a href="http://dihudi.github.io" class="active">ABOUT ME</a></li>
-    <li><a 
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-href="http://dihudi.github.io/research.html">RESEARCH</a></li>
-    <li><a href="http://dihudi.github.io/cv.html">CV</a></li>
-    <li><a 
-
-href="http://dihudi.github.io/teaching.html">TEACHING</a></li>
-	  <li><a href="http://dihudi.github.io/data.html">DATA</a></li>
- 
-    <li><a href="https://medium.com/@dihuarchaeology">BLOG</a></li>
-	     <li><a href="https://berkeley.academia.edu/DiHu"><img src="academia.jpg" height="35" alt="Academia.edu profile"></a></li>
-	     <li><a href="https://scholar.google.com/citations?user=uMLe8BsAAAAJ&hl=en"><img src="googlescholar.jpg" height="35" alt="Google Scholar profile"></a></li>
-	     <li><a href="https://www.researchgate.net/profile/Di_Hu35"><img src="researchgate.JPG" alt="ResearchGate profile" height="35"></a></li>
-	      </ul>
-	
-  <span class="right"></span>
-</div>
-<hr>
-</td>
-</tr>
-    <tr><td width="1050" style="vertical-align:top;">
-
-<p style="text-align:justify; line-height:1.1"> <font size="20"> I</font> am a broadly trained anthropological archaeologist whose research explores the intersection of landscape and political ecology. I am currently an assistant professor of Anthropology at James Madison University. Using a combination of environmental archaeology methods such as geospatial analysis, geochemical analysis, starch grain analysis, and archival research, I investigate how landscape constrains and provides opportunities for collective action, such as the rise of states, coordinated rebellions, and the emergence of new group identities in South America. My research highlights the key role that social landscapes—the organization of social relations over the landscape—play in facilitating collective struggles to control one’s own labor, ritual landscape, and ecological resources.   </p>
-
-	    <p>In my spare time, I enjoy making art, <a href="knappingexamples.jpg">flint knapping</a>, and <a href="photos.html">film photography</a>.</p>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<center><img src="logo.jpg" width="100%"></center>
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="about">
+    <h1 class="w3-jumbo"><b>How do social landscapes inform collective action?</b></h1>
+    <h1 class="w3-xxxlarge w3-text-purple"><b>About me</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+   <p>I am an assistant professor of Anthropology at James Madison University. I am a broadly trained anthropological archaeologist whose research explores the intersection of landscape and political ecology. I am currently an assistant professor of Anthropology at James Madison University. Using a combination of environmental archaeology methods such as geospatial analysis, geochemical analysis, starch grain analysis, and archival research, I investigate how landscape constrains and provides opportunities for collective action, such as the rise of states, coordinated rebellions, and the emergence of new group identities in South America. My research highlights the key role that social landscapes—the organization of social relations over the landscape—play in facilitating collective struggles to control one’s own labor, ritual landscape, and ecological resources.</p>
+  <p>In my spare time, I enjoy making art, <a href="knappingexamples.jpg">flint knapping</a>, and film photography.</p>
 	    
-  <center><img src="tiwanakupointdi.gif" width="100"></center></td>
-	 </tr>
-</table>
 
+  </div>
+  
+
+
+  <!-- Research -->
+  <div class="w3-container" id="research" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Research</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Currently, I am pursuing several distinct collaborations. The first is continuing an experimental archaeology and lithic analysis of Tiwanaku-style arrowheads to understand state formation. I was able to engage students in the experimental archaeology part of this project as a part of their independent studies. The second is a research collaboration with Sonia Alconini of the University of Virginia exploring archaeological influences on neo-Andean architecture in El Alto, Bolivia. The third is a digital humanities project in collaboration with Jeremy Mikecz and Alan Farahani digitizing historical censuses and creating an open-source tool that allows for the visualization of kinship networks, demographic data, and landscapes of surname similarity. The fourth is a collaboration with Katherine Chiou (University of Alabama), Kylie Quave (George Washington University), Jordi Rivera (Brown University), Andrew Warnes (Leeds), and Psyche Williams-Forson (University of Maryland), and others, on food archaeology and intersectionality.</p>
+<p>	I am also working through analyzing and writing up past data collection on ancient Chincha balance beams (with Jordan Dalton of SUNY Oswego), Spanish colonial court cases, Spanish labor institutions (with Sarah Kennedy of Carleton College and Maria Smith of Syracuse), and the chronology of Inka labor institutions.
+ </p>
+  </div>
+  
+  <!-- Publications and Data -->
+  <div class="w3-container" id="pubs" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Publications and data</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>I strive to adhere to the principles of slow archaeology and data feminism. I value clear writing, concision, data transparency, mentorship, and accessibility.</p>
+    <p>Below you will find a list of my publications and their data, if available:
+    </p>
+   
+  </div>
+
+
+   <!-- Publications list -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="caj.JPG" alt="CAJ" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://www.cambridge.org/core/journals/cambridge-archaeological-journal/article/food-and-labour-under-imperial-rule-unravelling-the-food-landscape-of-transplanted-workers-mitmaqkuna-in-the-inka-empire/565AFA7590F960CE8FDE6068DE9E5360">Food and Labour under Imperial Rule: Unravelling the Food Landscape of Transplanted Workers (mitmaqkuna) in the Inka Empire</a></h5>
+          <p class="w3-opacity">Di Hu, Victor Vasquez, Teresa Rosales, Katherine Chiou, Rob Cuthrell, Kylie Quave (2024)</p>
+          <p><a href="https://figshare.com/projects/Food_and_labor_under_imperial_rule_Unraveling_the_food_landscape_of_transplanted_workers_mitmaqkuna_in_the_Inka_Empire/98032">Data (Figshare)</a></p>
+		<p><a href="https://osf.io/c49xh/">Data (Open Science Framework)</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="book.jpg" alt="Fabric of Resistance book" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://www.uapress.ua.edu/9780817321154/the-fabric-of-resistance/">The Fabric of Resistance: Textile Workshops and the Rise of Rebellious Landscapes in Colonial Peru</a></h5>
+          <p class="w3-opacity">Di Hu (2022)</p>
+          <p><a href="https://figshare.com/projects/The_Fabric_of_Resistance_Textile_Workshops_and_the_Rise_of_Rebellious_Landscapes_in_Colonial_Peru/92810">Data (Figshare)</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="cosmopolitanism.jpg" alt="Indigenous Cosmopolitanism" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9780429274251-19/indigenous-persistence-face-imperialism-di-hu-kylie-quave">Indigenous Persistence in the Face of Imperialism: Andean case studies</a></h5>
+          <p class="w3-opacity">Di Hu and Kylie Quave (2021)</p>
+          <p><a href="Hu_Quave_2021_preprint.pdf">Pre-print</a></p>
+          <p><a href="https://figshare.com/projects/Indigenous_persistence_in_the_Andes/88664">Data (Figshare)</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="prosperity.JPG" alt="Prosperity and Prestige" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://www.sciencedirect.com/science/article/abs/pii/S0278416519301333">Prosperity and prestige: Archaeological realities of unfree laborers under Inka imperialism</a></h5>
+          <p class="w3-opacity">Di Hu and Kylie Quave (2020)</p>
+          <p><a href="Hu_Quave_2020_postprint.pdf">Post-print</a></p>
+          <p><a href="https://data.mendeley.com/datasets/fttj9mcw2h/3">Data (Mendeley)</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="space.jpg" alt="Making space under the Inca" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://doi.org/10.15184/aqy.2019.82">Making space under the Inca: a space syntax analysis of a mitmaq settlement in Vilcas Huamán Province, Peru</a></h5>
+          <p class="w3-opacity">Di Hu (2019)</p>
+          <p><a href="Hu_2019_preprint.pdf">Pre-print</a></p>
+          <p>Data</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="obsidian.jpg" alt="ED-XRF analysis of obsidian artifacts from Yanawilka" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://doi.org/10.1016/j.jasrep.2018.01.018">ED-XRF analysis of obsidian artifacts from Yanawilka, a settlement of transplanted laborers (mitmaqkuna), and implications for Inca imperialism</a></h5>
+          <p class="w3-opacity">Di Hu (2018)</p>
+          <p><a href="Hu_Shackley_2018_preprint.pdf">Pre-print</a></p>
+          <p><a href="https://dihudi.github.io/Hu_Shackley_JASR_yanawilka_obsidian.xlsx">Data(excel file)</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div class="w3-row-padding w3-grayscale">
+       <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="folktales.jpg" alt="Revolutionary Power of Andean Folktales" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://www.sapiens.org/archaeology/andean-folk-tales-revolutionary-power/">The Revolutionary Power of Andean Folk Tales</a></h5>
+          <p class="w3-opacity">Di Hu (2017)</p>		
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="tiwanaku.jpg" alt="War or peace? Assessing the rise of the Tiwanaku state through projectile-point analysis" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="http://journal.lithics.org/wp-content/uploads/2021/04/lithics_37_2016_Hu.pdf">War or peace? Assessing the rise of the Tiwanaku state through projectile-point analysis</a></h5>
+          <p class="w3-opacity">Di Hu (2017)</p>
+        
+        </div>
+      </div>
+    </div> 
+     <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="ethnogenesis.jpg" alt="Approaches to the archaeology of ethnogenesis: Past and emergent perspectives" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://link.springer.com/article/10.1007/s10814-013-9066-0">Approaches to the archaeology of ethnogenesis: Past and emergent perspectives</a></h5>
+          <p class="w3-opacity">Di Hu (2013)</p>
+          <p><a href="Hu_2013_preprint.pdf">Pre-print</a></p> 
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div class="w3-row-padding w3-grayscale">
+       <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="monjas.jpg" alt="Archival documents on the obraje of Pomacocha" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://issuu.com/prensafranciscanaperu/docs/bolet_n_asfl_n__37_mayo_2012">Los documentos en el Archivo San Francisco de Lima sobre el obraje de Pomacocha de las monjas de Santa Clara de Huamanga</a></h5>
+          <p class="w3-opacity">Di Hu (2012)</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="haunted.jpg" alt="Memories of haunted places: an Andean village after the violence" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://escholarship.org/uc/item/50k7d493">Memories of haunted places: an Andean village after the violence</a></h5>
+          <p class="w3-opacity">Di Hu (2011)</p>    
+        </div>
+      </div>
+    </div>
+      <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="kalauyuni.jpg" alt="Análisis De Los Artefactos Líticos" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="http://dx.doi.org/10.13140/RG.2.2.23007.87207">Análisis de Los Artefactos Líticos</a></h5>
+          <p class="w3-opacity">Di Hu (2011)</p>  
+        </div>
+      </div>
+    </div>
+</div>
+
+   <div class="w3-row-padding w3-grayscale">
+       <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="gis.jpg" alt="Advancing Theory?: Landscape Archaeology and Geographical Information Systems" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://student-journals.ucl.ac.uk/pia/article/id/212/print/">Advancing Theory?: Landscape Archaeology and Geographical Information Systems</a></h5>
+          <p class="w3-opacity">Di Hu (2011)</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="seniorthesis.jpg" alt="Between the Sword and the Wall: Inca and Modern Peruvian State Strategies of Control in Pomatambo-Vilcashuaman" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://repository.upenn.edu/handle/20.500.14332/1689">Between the Sword and the Wall: Inca and Modern Peruvian State Strategies of Control in Pomatambo-Vilcashuaman</a></h5>
+          <p class="w3-opacity">Di Hu (2007)</p>    
+        </div>
+      </div>
+    </div>  
+         <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="minting.jpg" alt="Experimental Roman Minting" style="width:100%">
+        <div class="w3-container">
+          <h5><a href="https://exarc.net/sites/default/files/exarc-eurorea_3_2006-experimental_roman_minting.pdf">Experimental Roman Minting</a></h5>
+          <p class="w3-opacity">Di Hu (2006)</p>    
+        </div>
+      </div>
+    </div>  
+      </div>
+
+  <!-- Teaching -->
+  <div class="w3-container" id="teaching" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Teaching</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+   <p> My teaching philosophy centers on preparing students to be thoughtful global citizens by honing critical thinking, practical skills, and collaboration. I aim to connect classroom learning to students' aspirations and challenges. With training in social sciences and a background in cultural anthropology and history, I provide a multidisciplinary approach, exposing students to anthropology, history, political science, and sociology. This fosters comfort with diverse epistemologies and shifts them from rote learning to critical reasoning, introducing alternative worldviews like Quechua materiality and Indigenous histories.</p>
+
+<p>I view assessments as tools to inspire growth in critical thinking and skills, not as measures of inherent ability. I encourage students to challenge authority, including mine, by critiquing my published writings, building rapport, and avoiding logical fallacies. Inspired by Chaucer's clerk, "Glady would he learn, and gladly teach," I frame learning as a collaborative process, creating a safe space for open dialogue and co-creation of knowledge.
+</p>
+<p>Teaching enriches my research, as student insights broaden my perspectives and refine my arguments. My courses emphasize cooperation and critical reasoning, fostering a supportive learning journey. I focus on empowering students to create knowledge through assignments like research papers and creative projects. Using scaffolding and the Socratic method, I guide students from foundational concepts to complex theories. Interactive activities like debates and role-playing build engagement, while archaeological case studies illustrate the relevance of historical and contemporary social processes, preparing students to address societal and ecological challenges. My teaching has been recognized by an "Oustanding Graduate Student Instructor" award at UC Berkeley and nominations for the Madison Vision Teaching Award (student-nominated) and the Goodman Award (college-nominated) at James Madison University. </p>
+ <p>   Below are some of the substantive praise I have received from students:</p>
+  </div>
+
+     <section>
+      <article>
+        <details>
+          <summary>Buried Cities, Lost Tribes: The Rise and Fall of Early Human Societies</summary>
+       
+            <p>1. The course is well designed and covers a broad range of topics while maintaining depth in each. The professor is absolutely wonderful. She’s engaging, knowledgeable, and understanding. I’ve learned a lot from her.</p>
+          <p>2. What I absolutely adored about Dr. Hu and her teaching methods was her ability to make the material more digestible. Some concepts were a bit confusing at first, but by bringing in pop culture references and connecting it more to what I was comfortable with, I was able to retain information much easier. I loved her!</p>
+      <p>3. Dr. Hu is extremely dedicated. Course was narrow enough to allow us to look at the units in detail but not so narrow that stuff became boring or too focused on the minutiae. Really interestng subject. I really liked how the course focused specifically on the rise and fall of civilizations. The course challenges a lot of commonly–held beliefs in the field. Dr. Hu works hard to make the material engaging, and during lectures doesn't talk so fast it's hard to keep up but doesn't talk so slow that the lectures drag. Very rarely did I find myself having to rush to write down all of the information in my notes.</p>
+       <p>4. The major strength Dr. Hu's class has is its ability to involve students in class time. We go into class having read the modules and then Dr. Hu lectures in a way that invites us to give our critical feedback. This style of teaching is best for me because when I am hands on I perform the best and retain information much better.</p>
+        <p>5.	I will take the appreciation of professors who try to make the class enjoyable for their students. This semester was anything but normal but Dr. Hu tried really hard to make the material and lectures engaging, fun, meaningful, and worth us showing up and I havent seen any professor care that much especially in online classes.</p>
+        <p>6. Critical thinking. Dr. Hu sets her classes, quizzes, and exams up in a way that forces students to think outside the box. This way of thinking has been valuable not only for succeeding in ANTH 205, but in every class I take.</p>
+        <p>7.	I really liked it as a class. I honestly wouldn't change anything because I enjoyed the way it was organized. The modules were very helpful because it allowed me to get an idea of what we were going to be discussing throughout the week. The discussion boards were also helpful because it would allow me to summarize what we learned throughout the week.</p>
+        <p>8. This is the class I believe I have developed critical thinking most, and I attribute that to Dr. Hu. I learned a lot about the curriculum, but I mainly learned about human behaviors and the repetition in them.</p>
+       <p>9.	Its organization is superb. Each module is concise and orderly. The way the content progresses is very smooth and natural. Dr. Hu is very experienced and competent with the material and delivering it. Topics and the things taught in the class manage to be consistently relevant to students whether they are an Anthropology major or not.</p>
+       <p>10.	It is INCREDIBLY well–organized. The modules are separated by their main themes which makes it easy to identify the subjects that are important in this course, and what the main takeaways are. She was also extremely approachable and helpful during and outside of class hours, which made it more accessible to ask her questions and for help in the course.</p>
+        <p>11. One of the major things I am able to take from this class is the archaeological mindset oof disagreeing with ourselves. It is often so difficult to step away from social media and the news portals that are presenting biased and opinionated pieces but this class has showed that everything has bias and it is our job to analyze and determine what that is when being exposed to the different types of media and potential propaganda everywhere.</p>
+        <p>12. I learn to look at a piece of information and instead of believing in it right away, there should be research and analysis because false information can lead to many bad consequences that can affect the future, we are the people who determine what our society will be like, similar to the cheater game we played in class.</p>
+        </details>
+        
+     
+        <details>
+          <summary>Archaeology</summary>
+          <p>1.	I think the major strengths of ANTH197 are the interesting content within the class and how easily it is to learn even to a person not in the major.</p>
+   <p> 2.	Each lecture was packed full of information that was relevant to the course. It all supported assignments and the midterm. The activity notebooks helped me to actually learn how to do the archaeological methodologies that we learned in class.</p>  
+<p>3.	The course material is presented in a way that keeps it relevant to the human condition, and anyone can walk away having learned something every class.</p>
+<p>4.	I enjoyed the various videos and physical items that Dr. Hu brought to class. It made the class much more engaging and helped to be able to see physical representation for everything we discussed in class.</p>
+<p>5.	The activity notebooks were quite helpful because you get to test yourself and see whether you grasped the material or not after learning it in class.</p>
+<p>6.	The most valuable materials were the readings and the knowledge offered by the instructor; they were able to use their experience in the field and academia to thoughtfully explain the course content.</p>
+<p>7.	The classes dedicated to inequality and ethics were exceptionally interesting. It explained the greater implications of the field and why the class matters, while also giving us the tools to answer large ethical questions and asses inequality in the world around us.</p>
+<p>8.	I really enjoyed the course. It helped foster a curiosity about the natural and human world in me as well as a deep appreciation for the people who help explore and preserve artifacts and history.</p>
+<p>9. The course ANTH 197 is structured well, and it has many materials that are very helpful when learning the concepts of
+archaeology.</p>
+          
+        </details>
+  
+        <details>
+          <summary>Experimental Archaeology</summary>
+          <p>1. Dr. Hu is a very engaging professor, the strength is that the class is activity based, and theres always something new to learn.</p>
+<p>2. Dr. Hu did a good job of giving us fun practical experience to pair with the lecture and reading material, the experiments and activities were engaging and helped strengthen my grasp on archaeological experimentation as a whole.</p>
+<p>3. Bringing in and showing what we are learning about, really helped me understand more about the topic. The activity notebooks, helped me learn more and keep up to date with class and made me want to go to class. I really enjoyed this aspect of the class.</p>
+<p>4. I found the grant proposal process to be immensely valuable, learning the proper formatting and practicing it with the creative aspect of designing our own experiment was amazing and a great experience i will be able to take away from this class and apply in the future.</p>
+<p>5. I found the layout of the course very helpful. I like how everything was organized and feedback was quick.The explanations of lecture was very well, and it helped me learn. Also, how she talked about her experiences I thought was very neat, and I felt more engaged in the class.</p>
+   <p>  6. I really enjoyed the class. I'm not even an archaeology major, but Professor Hu made it interesting and engaging. I loved doing
+the experiments in class where we actually got to do hands–on work.</p>
+        <p>  7. The professor is very generous in giving feedback. She is a tough grader, but usually gives an opportunity for a provisional
+grade and feedback before giving a final grade. Discussion based classes make for a better understanding of the material
+being taught.</p>
+         <p> 8. In class activities, because they promoted critical thinking and analysis of readings, and a draft of the final paper due before
+the actual final. I found making mistakes and then correcting them for the final to be more helpful than a single final grade
+would have been.</p>
+        </details>
+    
+          <details>
+          <summary>Andean Archaeology</summary>
+      <p>  1.	Dr. Hu is very knowledgeable and genuinely wants us to learn</p>
+<p>2.	Very insightful, makes you work for your grade</p>
+<p>3.	The professors willingness to help you out and understand all of the information</p>
+<p>4.	Dr. Hu's knowledge and enthusiasm of the material is a strength.</p>
+<p>5.	Professor Hu was able to illustrate the material in an interesting narrative, and explained topics with great detail.</p>
+<p>6.	(most valuable for learning) lectures because they were clear and concise</p>
+<p>7.	I'm interested in Andean archaeology and particularly ritual and ancestor worship. I'm a senior and looking at what to do for a senior thesis, and am intrigued by different ideas of ritual and worship. What we've discussed in class may have an impact on what I choose to do.</p>
+
+        </details>
+
+  
+            <details>
+          <summary>Archaeology of Empires and Rebels</summary>
+        <p>  1.	Broad knowledge of subjects discussed, professor is willing to help students out with questions or issues they have</p>
+<p>2.	She was very welcoming and easy to ask questions, ask for due date. flexibility, contribute ideas and feel like a part of the course and class, despite distance. Her passion about the class carried over to us as a class.</p>
+<p>3.	Dr. Hu assigned a reasonable amount of work for this level of class. She was great to talk to in her office hours and we definitely covered many different empires it wasn't focused on the mainstream ones.</p>
+<p>4.	She seems to very knowledgeable about the material and archaeology as a whole. Assignments are clear and straight forward. Always willing to answer questions.</p>
+<p>	I liked how involved we were, and I liked the discussion–based approach we took. I much preferred it to quizzes and other things. I felt like I got to engage a bit more with the people in my class.</p>
+<p>6.	The split between Tuesday and Thursday being lecture/discussion was really helpful in knowing when to be prepared and made it easy to come to class and participate</p>
+<p>7.	I enjoyed working with QGIS software I think it's something that will be useful for me in the future and it was a fun way for me to play around with geographies of places.</p>
+<p>8.	The questions that we produce and she answers in class and when we can discuss the answers to the questions in class with our peers</p>
+<p>9.	An ability to ask questions about history and to assert arguments based on research. I also have a new understanding of power and rebellion, which is really neat to have.</p>
+<p>10.	The professor is extremely knowledgeable and well versed in the subject.</p>
+<p>11.	Teaching a wide variety of topics, while maintaining a common theme/themes between all of the readings. </p>
+<p>12.	I appreciated class activities that engaged every student in working together. I also liked the articles that provided information without using extensive academic jargon.</p>
+
+        </details>
+
+          
+            <details>
+          <summary>Food Archaeology</summary>
+      <p>  1.	one of the best professors i have had at JMU, very engaging, hilarious!!, I feel very comfortable around this professor I would go to them for advice outside of class if needed</p>
+<p>2.	dr. hu truly understands her topic and is able to pull examples and other ways of understanding what we're focusing on at the time to make it much more accessible than it is during the difficult readings</p>
+<p>3.	Dr. Hu is great at facilitating discussion among students. She does a great job helping students make connections and think critically about the information being presented. I appreciate her sense of humor and encouragement to always consider the source.</p>
+<p>4.	She was an interesting professor and had fun stories. She was pretty funny and made the class interesting. She was also clearly educated on the topic which helped with understanding the information better, given the opportunity to ask questions.</p>
+<p>5.	Food traditions of people from different areas based on archaeological evidence. This is important to be because I was able to learn to how analyze readings in a critical way.</p>
+<p>6.	The food journals helped a lot with breaking down the information and relating it to my life better. The discussions/canvas chat also helped with comprehending everything.</p>
+<p>7.	all of the discussions were very fun and i felt a connection to other students. i love how accepting everyone is and how much fun we had. I can't wait to start our business :)</p>
+<p>8.	honestly the importance of studying food and how it relates to culture– it's such an easy thing to take for granted or not think too much about since it's part of a daily routine and is more of a necessary action, but the way in which we eat and what we eat really defines our group; creates a connected culture</p>
+<p>9.	The most fascinating is how elite people in every culture are constantly trying to differentiate themselves. The most memorable is the history of utensils like chopstick, hands, forks, spoons, and knives.</p>
+<p>10.	The different style of learning compared to youth average class, allowed for a more complex learning experience.</p>
+<p>11.	Really interesting course content, and when we did activities, it was easier to engage with the material and each other. The reading journals definitely kept everyone (me) accountable to actually doing the reading</p>
+<p>12.	I learned a lot about archeology, other cultures, and gained critical thinking skills that I didn't know or have before</p>
+<p>13.	Very engaging course content and a lively discussion environment</p>
+<p>14.	This class has certainly trained me to be able to recognize when an article / paper might not be as trustworthy as one might immediately think. I've learned to better identify what important details of an author's argument are missing and what else they might have included to make their argument that much stronger.</p>
+<p>15.	I think the readings we had for class were very interesting, and great for provoking deep thought.</p>
+<p>16.	I liked the food reflection journals because they made me really think and connect the course to real world experiences which was helpful. Also the ancient recipe video was fun.</p>
+<p>17.	Reading the articles was valuable for me because I learned how to properly read a scholarly paper and pick it apart to find what the professor was looking for.</p>
+<p>18.	The small group discussions and class activities were very interesting, and it was fun to share our answers with the class.</p>
+<p>19.	I learned a great deal about other cultures that I was not familiar with, gained a new understanding and perspective for other societies and communities as well</p>
+<p>20.	I will definitely take my enhances ability to look critically at that which is claimed in articles, whether "scholarly" or simple more blog–like</p>
+
+        </details>
+         
+
+        <details>
+          <summary>Introduction to Archaeology: American Cultures (UC Berkeley)</summary>
+        <p>  1. Di encouraged free thought and discussion in a welcoming educational environment. Sections were very informative and fun.</p>
+<p>2. Di was an absolutely fabulous GSI. She was friendly, knowledgeable, sincere, and passionate to say the least about the subject. I really enjoyed being in her section and think she was the best GSI I could've gotten.</p>
+<p>3. Thank you Di. I've probably sent you around 30 emails + you always respond. I can write another 15 pg paper saying how Anthro has helped me. Thank you for Todo.</p>
+        </details>
+   
+            
+        <details>
+            <summary>Introduction Biological Anthropology (UC Berkeley)</summary>
+         <p>1. Di Hu was a very encouraging GSI for the students in the class. Even though I do not like speaking in front of other people, she was always able to talk with me after section and she made it clear that she wanted me to succeed, but also that she KNEW that I could succeed.</p>
+<p>2. The GSI for this course has been great overall. She listens to any questions we might have and answers them clearly. She is very helpful with both labs and quiz questions and is willing to stay a little after section if needed. She seems to care about her students and encourages them to do well in the course.</p>
+<p>3. Di is a great gsi! Very helpful, great communication, always responds to emails on time, is available during OH or through appointment. Firm grasp on material and emails questions we didn't grasp in section. Favorite gsi at CAL so far!</p>
+<p>4. Incredibly open and supportive GSI. The best I have had at Cal because of her genuine desire for us to do well personally, not just as a whole. She knows each of us better than any other GSI I have had and I know she has reached out to students who were struggling in this class before in order to ensure they were ok and so that they knew they had her support. Di Hu is passionate, engaging and kind. Best GSI I have had.</p>
+<p>5. Truly appreciated the help the TA would give not only in lab but also for large assignments. Very friendly and made section more entertaining by having section mascots.</p>
+
+        </details>
+
+        <details>
+         <summary>Spatial Anthropology of Control and Resistance (UC Berkeley)</summary>
+       <p>  1. Great class. Very productive discussion topics during class and the teaching style is great. Instructor does not pressure us too hard on contributing to discussions but always present interesting thoughts that would make us want to jump into the discussion. Very open-minded and encouraging. Thank you!</p>
+<p>2. Di was one of the most eye opening instructors I've ever had. She was always engaging and did her best to get us to talk (even though we were all pretty shy). I thoroughly enjoyed this class!</p>
+<p>3. Di Hu is an INCREDIBLE teacher. I have learned tremendously useful information in this class. The class was set up in a circle that was conducive for dialoguing. This is true education. Di is very rare and special...Made this experience that probably is miserable for most incredibly enjoyable. Learning an unparalleled amount and being able to implement it in my daily life; I will take these lessons with me.</p>
+
+        </details>
+        <details>
+        <summary> Ancient World History: Approaches to World Archaeology (Prison University Program, now Mount Tamalpais College, San Quentin State Prison) </summary>
+         <p> 1. Can easily see the professor with her. Her attitude is friendly and profession[al]. Her knowledge about the material is vast, and she dispense[s] with it openly.</p>
+<p> 2. She is very patient and understanding. Although I didn't find the subject as engaging as she did, I felt her style of teaching helped me to appreciate archaeology a great deal more.</p>
+<p> 3. Super intellectual with a archaeological sense of humor that kept me interested the whole semester.</p>
+        </details>
+      </article>
+     
+
+       
+</section>
+
+  
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-purple"><b>Contact</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>If you want to get in touch with me, please send me a message at hudx(at)jmu.edu.</p>
+   <li> <a href="https://berkeley.academia.edu/DiHu"><img src="academia.jpg" height="35" alt="Academia.edu profile">Academia.edu profile</a></li>
+	<li> <a href="https://scholar.google.com/citations?user=uMLe8BsAAAAJ&hl=en"><img src="googlescholar.jpg" height="35" alt="Google Scholar profile">Google scholar profile</a> </li>
+	<li>  <a href="https://www.researchgate.net/profile/Di_Hu35"><img src="researchgate.JPG" alt="ResearchGate profile" height="35">Researchgate profile</a></li>
+	  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Copyright 2024. Di Hu, All Rights Reserved. Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
 <!-- Default Statcounter code for Dihudi.github.io
 http://dihudi.github.io -->
 <script type="text/javascript">
